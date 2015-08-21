@@ -1,0 +1,16 @@
+<input type='hidden' class='soil-images-data' value='{{value}}' />
+<a id="{{id}}-images" href='{{upload_iframe_src}}' class='soil-upload-button button button-highlighted button-primary' rel='{{rel}}' metabox_id='{{id}}' upload_handler='{{upload_handler}}' metabox_type='{{metabox_type}}'>Attach New Image(s)</a>
+
+<ul class='soil-images soil-upload clear' id='{{id}}-list'>
+
+	{{#images}}
+	<li id='{{li_id}}'>
+		<a href='{{{post_link}}}'><img src='{{img_src}}' /></a>
+		<a title='Delete this image' class='soil-delete-file' href='javascript:void(0);' rel='{{rel}}'>Delete</a>
+		<input type='hidden' class='{{input_class}}' name='{{input_name}}' value='{{input_value}}' />
+	</li>
+	{{/images}}
+
+</ul>
+
+<br class="clear">

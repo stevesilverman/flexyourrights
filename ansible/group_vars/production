@@ -3,11 +3,11 @@ mysql_root_password: HVQCR8c>sp=*Lt23Uzp3{ZPp
 wordpress_sites:
   flexyourrights.org:
     site_hosts:
-      - www.flexyourrights.org
+      - flexyourrights.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:FlexYourRights/flexyourrights.git
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
+    subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
       subdomains: false
@@ -20,8 +20,8 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://www.flexyourrights.org
-      wp_siteurl: http://www.flexyourrights.org/wp
+      wp_home: https://www.flexyourrights.org
+      wp_siteurl: https://www.flexyourrights.org/wp
       wp_env: production
       db_name: fyr_prod
       db_user: fyr_prod

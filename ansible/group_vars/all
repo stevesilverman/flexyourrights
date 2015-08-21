@@ -11,6 +11,8 @@ mail_hostname: flexyourrights.org
 mail_user: info@flexyourrights.org
 mail_password: 0UlIqmP1
 
+strip_www: false
+
 hhvm: false
 
 web_user: web

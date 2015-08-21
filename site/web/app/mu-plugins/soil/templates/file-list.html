@@ -1,0 +1,12 @@
+<input id="upload_file" type="text" size="36" name="{{id}}" value="" />
+<input class="upload_button button button-primary" type="button"  upload_handler="{{upload_handler}}" metabox_type="{{metabox_type}}" value="Upload File" />
+
+<ul class="attach_list">
+
+	{{#files}}
+	<li>{{{attach_link}}}
+		<span>{{{attach_title}}}</span>
+	</li>
+	{{/files}}
+
+</ul>

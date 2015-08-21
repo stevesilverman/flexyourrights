@@ -1,0 +1,10 @@
+<div id="{{id}}-wysiwyg" class="poststuff meta_mce">
+	<div class="brl-editor-toolbar">
+		<a id="edBrlButtonHTML" class="edBrlButtonHTML" onclick="switchBRLEditors.go('{{id}}', 'html');">HTML</a>
+		<a id="edBrlPreview" class="edBrlPreview active" onclick="switchBRLEditors.go('{{id}}', 'tinymce');">Visual</a>
+	</div>
+	<div class="customEditor">
+		<textarea class="brlEditor large-text" name="{{id}}" id="{{id}}" cols="60" rows="7" style="width:97%">{{{meta}}}</textarea>
+	</div>
+	<br><br>
+</div>

@@ -83,13 +83,13 @@ class FYR_Follow_Widget extends soilWidget {
       $instance = $this->defaults;
 
     extract($instance); ?>
-    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FFlexYourRights&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:35px;" allowTransparency="true"></iframe>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FFlexYourRights&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:35px;" allowTransparency="true"></iframe>
     <?php if (is_front_page()) { ?>
       <p><a href="https://twitter.com/FlexYourRights" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @FlexYourRights</a></p>
-      <iframe src="http://www.youtube.com/subscribe_widget?p=flexyourrights" style="overflow: hidden; height: 105px; width: 300px; border: 0;" scrolling="no" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/subscribe_widget?p=flexyourrights" style="overflow: hidden; height: 105px; width: 300px; border: 0;" scrolling="no" frameborder="0"></iframe>
     <?php } else { ?>
       <p><a href="https://twitter.com/FlexYourRights" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @FlexYourRights</a></p>
-      <iframe src="http://www.youtube.com/subscribe_widget?p=flexyourrights" style="overflow: hidden; height: 105px; width: 100%; border: 0;" scrolling="no" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/subscribe_widget?p=flexyourrights" style="overflow: hidden; height: 105px; width: 100%; border: 0;" scrolling="no" frameborder="0"></iframe>
     <?php } ?>
 <?php
   }

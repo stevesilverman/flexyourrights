@@ -1,0 +1,37 @@
+mysql_root_password: HVQCR8c>sp=*Lt23Uzp3{ZPp
+
+wordpress_sites:
+  flexyourrights.org:
+    site_hosts:
+      - www.flexyourrights.org
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:FlexYourRights/flexyourrights.git
+    branch: master
+    # subtree: site # Use this if following the roots-example-project structure
+    multisite:
+      enabled: false
+      subdomains: false
+    ssl:
+      enabled: true
+      cert: ~/ssl/star_flexyourrights_org.crt
+      key: ~/ssl/star_flexyourrights_org.key
+    cache:
+      enabled: true
+      duration: 30s
+    system_cron: true
+    env:
+      wp_home: http://www.flexyourrights.org
+      wp_siteurl: http://www.flexyourrights.org/wp
+      wp_env: production
+      db_name: fyr_prod
+      db_user: fyr_prod
+      db_password: JWU6W3XgQbCT3qk2$u=}>VCf
+      # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
+      auth_key: "KTz5n@!nblh(*xe,cP^bx{XMtQ:-QqgBBr)t!ktvSHJ9E?k1!@7ZSg&|p<;-D.5R"
+      auth_salt: "G-aq#ij#XFHN4+6Qn6;NJz}Rh`X:t> gV:uceAPpPMV+(8l4{KZ 45CPe75cgSFM"
+      logged_in_key: "XD*b20*-3A!DZW$:;-@hg}1N89(5@iI^c/MdX owVyUzsEWA:Kdv1^n nP[xJ-Qj"
+      logged_in_salt: "R~|5$Ql}3[.Q}]?^v4@SC[#x?)$(sNh-|:+Af+[-D+[s3?DA+uGo9<TGHa6f]e%3"
+      nonce_key: "-9:Hldv^HQ[F/iIGV7&[2O6T~.AQHfDdvp+T+BUWt[`3=eEPs*~S|kVI+Y^|=j7&"
+      nonce_salt: "NPi14_<zRGn2<QZ>`Y@TI}V3KhJWGnOlx96CfiTBz%5yvJ^||-smkp!C;%^(UMN/"
+      secure_auth_key: "zAhug1c1)LyA;E^l_b$-|*|aQQonkB&A<~-1pHSQrb8&=Ox4$*Uh+_!=2QmCi%4+"
+      secure_auth_salt: "?/0n9+QVdYB-fPxX_l+22/<e6dGB+@z2r~Qua/A~1>k[~kDhb_a7gb3^+,thyMCQ"

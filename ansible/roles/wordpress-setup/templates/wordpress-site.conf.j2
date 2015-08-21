@@ -89,6 +89,18 @@ server {
   }
 }
 
+server {
+  listen 80;
+  server_name www.flexyourrights.org;
+  return 301 https://www.flexyourrights.org$request_uri;
+}
+
+server {
+  listen 443;
+  server_name flexyourrights.org;
+  return 301 https://www.flexyourrights.org$request_uri;
+}
+
 {% if item.value.ssl is defined and item.value.ssl.enabled | default(False) %}
 server {
   listen 80;

@@ -37,16 +37,6 @@
   <?php wp_footer(); ?>
   <?php roots_footer(); ?>
 
-<?php if (!is_front_page()) { ?>
-<script>
-  (function() {
-    var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
-    li.src = 'https://platform.stumbleupon.com/1/widgets.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
-  })();
-</script>
-<?php } ?>
-
 <script type="text/javascript">
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];

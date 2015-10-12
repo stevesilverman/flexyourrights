@@ -239,7 +239,7 @@ add_shortcode('faq_cats', 'fyr_faq_cats');
 function fyr_faq_cats($atts) { ?>
   <div class="accordion" id="faq-accordion">
   <?php
-    $faq_categories = get_terms('fyr_faq_categories', array('hide_empty' => 0));
+    $faq_categories = get_terms('fyr_faq_categories', array('hide_empty' => 0, 'exclude' => 241));
     foreach($faq_categories as $faq_category) {
       $faq_id = $faq_category->term_id;
       $faq_link = get_term_link($faq_category->slug, 'fyr_faq_categories');
@@ -272,3 +272,22 @@ function fyr_faq_cats($atts) { ?>
   </div>
   <?php
 }
+
+function exclude_posts($query) {
+  if (!is_admin() && !is_search() && !is_single()) {
+    $query->set('tag__not_in', array(242, 243, 245));
+
+    $tax_query = array(
+      array(
+        'taxonomy' => 'fyr_faq_categories',
+        'field' => 'id',
+        'terms' => array(241),
+        'operator'=> 'NOT IN'
+      )
+    );
+
+    $query->set('tax_query', $tax_query);
+  }
+}
+
+add_action('pre_get_posts', 'exclude_posts');

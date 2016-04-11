@@ -5,11 +5,11 @@ mariadb_dist: trusty
 mysql_user: root
 www_root: /srv/www
 
-mail_smtp_server: smtp.mandrillapp.com:587
+mail_smtp_server: smtp.mailgun.org:587
 mail_admin: info@flexyourrights.org
-mail_hostname: smtp.mandrillapp.com
-mail_user: ben+fyr@benword.com
-mail_password: RAk802k6VDFJi6eprYQVaw
+mail_hostname: smtp.mailgun.org
+mail_user: postmaster@flexyourrights.org
+mail_password: 175923d08e443519f754e25263e21a9c
 
 strip_www: false
 

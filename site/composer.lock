@@ -4,22 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "acaae741177c48a1f571b728316a3458",
-    "content-hash": "09930ee61e5dfb285d86093d3f23c6eb",
+    "hash": "a38fdfcec7766ab09782a89d409643ff",
+    "content-hash": "be679e190a5f3451183b13b3996816cd",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.21",
+            "version": "v1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
                 "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -29,16 +32,16 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "4.1.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "Composer\\Installers\\Installer",
+                "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -53,12 +56,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -100,20 +105,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-02-18 17:17:01"
+            "time": "2016-04-13 19:46:30"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.3.1",
+            "version": "4.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f"
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f",
-                "reference": "cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
+                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +142,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-09-15 15:01:23"
+            "time": "2016-06-21 16:31:21"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -189,25 +194,30 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.0.1",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "91064290f5b53a09bdff1b939d7f69fb0e7531b5"
+                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/91064290f5b53a09bdff1b939d7f69fb0e7531b5",
-                "reference": "91064290f5b53a09bdff1b939d7f69fb0e7531b5",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9ca5644c536654e9509b9d257f53c58630eb2a6a",
+                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Dotenv\\": "src/"
@@ -215,7 +225,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "BSD-3-Clause-Attribution"
             ],
             "authors": [
                 {
@@ -225,25 +235,24 @@
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-            "homepage": "http://github.com/vlucas/phpdotenv",
             "keywords": [
                 "dotenv",
                 "env",
                 "environment"
             ],
-            "time": "2015-05-30 16:15:01"
+            "time": "2016-06-14 14:14:52"
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.1.4",
+            "version": "3.1.11",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.4"
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/3.1.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.11.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -255,10 +264,10 @@
         },
         {
             "name": "wpackagist-plugin/disqus-comment-system",
-            "version": "2.84",
+            "version": "2.85",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/disqus-comment-system/",
+                "url": "https://plugins.svn.wordpress.org/disqus-comment-system/",
                 "reference": "trunk"
             },
             "dist": {
@@ -278,7 +287,7 @@
             "version": "2.9.6",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/page-links-to/",
+                "url": "https://plugins.svn.wordpress.org/page-links-to/",
                 "reference": "tags/2.9.6"
             },
             "dist": {
@@ -295,15 +304,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "2.4.2",
+            "version": "2.4.5",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/redirection/",
-                "reference": "tags/2.4.2"
+                "url": "https://plugins.svn.wordpress.org/redirection/",
+                "reference": "tags/2.4.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.2.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/redirection.2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -315,15 +324,15 @@
         },
         {
             "name": "wpackagist-plugin/simple-pull-quote",
-            "version": "1.4",
+            "version": "1.5",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/simple-pull-quote/",
-                "reference": "tags/1.4"
+                "url": "https://plugins.svn.wordpress.org/simple-pull-quote/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-pull-quote.1.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-pull-quote.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -338,7 +347,7 @@
             "version": "0.57",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/widget-logic/",
+                "url": "https://plugins.svn.wordpress.org/widget-logic/",
                 "reference": "tags/0.57"
             },
             "dist": {
@@ -358,7 +367,7 @@
             "version": "2.3.5",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
                 "reference": "tags/2.3.5"
             },
             "dist": {
@@ -375,15 +384,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-pagenavi",
-            "version": "2.88",
+            "version": "2.91",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-pagenavi/",
-                "reference": "tags/2.88"
+                "url": "https://plugins.svn.wordpress.org/wp-pagenavi/",
+                "reference": "tags/2.91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.88.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.91.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -395,15 +404,15 @@
         },
         {
             "name": "wpackagist-plugin/zemanta",
-            "version": "1.3",
+            "version": "1.3.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/zemanta/",
-                "reference": "tags/1.3"
+                "url": "https://plugins.svn.wordpress.org/zemanta/",
+                "reference": "tags/1.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/zemanta.1.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/zemanta.1.3.1.zip",
                 "reference": null,
                 "shasum": null
             },

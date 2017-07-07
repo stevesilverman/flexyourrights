@@ -8,20 +8,6 @@
           <?php echo do_shortcode('[faq_cats]'); ?>
         </section>
 
-        <section id="shop" class="group">
-          <h2><a href="/shop/">Shop</a></h2>
-          <div class="row">
-            <div class="span4">
-              <h3 class="hidden"><a href="/10-rules/">10 Rules for Dealing with Police</a></h3>
-              <p><a href="/10-rules/"><img src="<?= get_template_directory_uri(); ?>/img/10-rules.jpg" alt="10 Rules for Dealing with Police"></a></p>
-            </div>
-            <div class="span4">
-              <h3 class="hidden"><a href="/busted/">BUSTED: The Citizen's Guide to Surviving Police Encounters</a></h3>
-              <p><a href="/busted/"><img src="<?= get_template_directory_uri(); ?>/img/busted.jpg" alt="BUSTED"></a></p>
-            </div>
-          </div>
-        </section>
-
         <section id="loop" class="group">
           <?php
             $loop_query_args = array(

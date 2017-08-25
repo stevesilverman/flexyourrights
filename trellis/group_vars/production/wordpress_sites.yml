@@ -7,7 +7,7 @@ wordpress_sites:
     site_hosts:
       - canonical: www.flexyourrights.org
         redirects:
-          - flexyourrights.com
+          - flexyourrights.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:stevesilverman/flexyourrights.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
@@ -16,9 +16,6 @@ wordpress_sites:
       enabled: false
     ssl:
       enabled: true
-      provider: manual
-      cert: ~/ssl/star_flexyourrights_org.crt
-      key: ~/ssl/star_flexyourrights_org.key
-      # provider: letsencrypt
+      provider: letsencrypt
     cache:
       enabled: true

@@ -1,0 +1,6 @@
+# Documentation: https://roots.io/trellis/docs/mail/
+mail_smtp_server: smtp.mailgun.org:587
+mail_admin: info@flexyourrights.org
+mail_hostname: smtp.mailgun.org
+mail_user: postmaster@flexyourrights.org
+mail_password: "{{ vault_mail_password }}"

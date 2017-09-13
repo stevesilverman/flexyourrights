@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a38fdfcec7766ab09782a89d409643ff",
-    "content-hash": "be679e190a5f3451183b13b3996816cd",
+    "content-hash": "bce60a307bb968a4b474430c3ec5cbd1",
     "packages": [
         {
             "name": "composer/installers",
@@ -105,24 +104,62 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-04-13T19:46:30+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.5.3",
+            "version": "4.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715"
+                "reference": "75bbc8dade6d66b66c7184656df7b3d545d31baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
-                "reference": "f5c6f4dd899e6365ddf2752d2705ed1de7e10715",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/75bbc8dade6d66b66c7184656df7b3d545d31baa",
+                "reference": "75bbc8dade6d66b66c7184656df7b3d545d31baa",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core-installer": "~0.2",
+                "johnpbloch/wordpress-core": "4.8.1",
+                "johnpbloch/wordpress-core-installer": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-08-02T21:47:41+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "eee7b6128469d31803da3a07aaac9c442f81758e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/eee7b6128469d31803da3a07aaac9c442f81758e",
+                "reference": "eee7b6128469d31803da3a07aaac9c442f81758e",
+                "shasum": ""
+            },
+            "require": {
                 "php": ">=5.3.2"
             },
             "type": "wordpress-core",
@@ -140,22 +177,23 @@
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
-                "cms"
+                "cms",
+                "wordpress"
             ],
-            "time": "2016-06-21 16:31:21"
+            "time": "2017-08-02T21:47:36+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "0.2.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2"
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/a04c2c383ef13aae077f36799ed2eafdebd618d2",
-                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +203,8 @@
                 "composer/installers": "<1.0.6"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev"
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
             },
             "type": "composer-plugin",
             "extra": {
@@ -190,20 +229,65 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-06-11 15:15:30"
+            "time": "2017-05-31T18:42:33+00:00"
         },
         {
-            "name": "vlucas/phpdotenv",
-            "version": "v2.3.0",
+            "name": "roots/soil",
+            "version": "3.7.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a"
+                "url": "https://github.com/roots/soil.git",
+                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9ca5644c536654e9509b9d257f53c58630eb2a6a",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a",
+                "url": "https://api.github.com/repos/roots/soil/zipball/d0e409e70dafff4ceeaa8ef941ee319e350317dd",
+                "reference": "d0e409e70dafff4ceeaa8ef941ee319e350317dd",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-08-14T01:36:41+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +299,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -240,19 +324,19 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-06-14 14:14:52"
+            "time": "2016-09-01T10:05:43+00:00"
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.1.11",
+            "version": "3.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.11"
+                "reference": "tags/3.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.3.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -284,15 +368,15 @@
         },
         {
             "name": "wpackagist-plugin/page-links-to",
-            "version": "2.9.6",
+            "version": "2.9.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/page-links-to/",
-                "reference": "tags/2.9.6"
+                "reference": "tags/2.9.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/page-links-to.2.9.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/page-links-to.2.9.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -304,15 +388,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "2.4.5",
+            "version": "2.7.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redirection/",
-                "reference": "tags/2.4.5"
+                "reference": "tags/2.7.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.2.4.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/redirection.2.7.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -344,15 +428,15 @@
         },
         {
             "name": "wpackagist-plugin/widget-logic",
-            "version": "0.57",
+            "version": "5.8.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/widget-logic/",
-                "reference": "tags/0.57"
+                "reference": "tags/5.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/widget-logic.0.57.zip",
+                "url": "https://downloads.wordpress.org/plugin/widget-logic.5.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -384,15 +468,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-pagenavi",
-            "version": "2.91",
+            "version": "2.92",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-pagenavi/",
-                "reference": "tags/2.91"
+                "reference": "tags/2.92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.91.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-pagenavi.2.92.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -404,15 +488,15 @@
         },
         {
             "name": "wpackagist-plugin/zemanta",
-            "version": "1.3.1",
+            "version": "1.3.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/zemanta/",
-                "reference": "tags/1.3.1"
+                "reference": "tags/1.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/zemanta.1.3.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/zemanta.1.3.3.zip",
                 "reference": null,
                 "shasum": null
             },

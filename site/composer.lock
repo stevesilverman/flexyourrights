@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6e1a7213c87d668c7acec9a3024a343",
+    "content-hash": "02031b75db88eb18cace657d2a992923",
     "packages": [
         {
             "name": "composer/installers",
@@ -616,6 +616,27 @@
             "homepage": "https://wordpress.org/plugins/simple-pull-quote/"
         },
         {
+            "name": "wpackagist-plugin/two-factor",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/two-factor/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/two-factor.zip?timestamp=1541505758",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/two-factor/",
+            "time": "2018-11-06T12:02:38+00:00"
+        },
+        {
             "name": "wpackagist-plugin/widget-logic",
             "version": "5.9.0",
             "source": {
@@ -936,6 +957,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "wpackagist-plugin/two-factor": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

@@ -1,5 +1,5 @@
 ---
-- include: variable-check.yml
+- import_playbook: variable-check.yml
   vars:
     playbook: rollback.yml
 
@@ -14,10 +14,5 @@
 - name: Rollback a Deploy
   hosts: web:&{{ env }}
   remote_user: "{{ web_user }}"
-
-  vars:
-    project_root: "{{ www_root }}/{{ site }}"
-    project_current_path: "{{ wordpress_sites[site].current_path | default('current') }}"
-
   roles:
     - rollback

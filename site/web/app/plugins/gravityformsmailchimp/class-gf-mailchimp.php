@@ -1,5 +1,10 @@
 <?php
 
+// don't load directly
+if ( ! defined( 'ABSPATH' ) ) {
+	die();
+}
+
 GFForms::include_feed_addon_framework();
 
 /**
@@ -17,7 +22,7 @@ class GFMailChimp extends GFFeedAddOn {
 	 *
 	 * @since  3.0
 	 * @access private
-	 * @var    object $_instance If available, contains an instance of this class.
+	 * @var    GFMailChimp $_instance If available, contains an instance of this class.
 	 */
 	private static $_instance = null;
 
@@ -148,13 +153,22 @@ class GFMailChimp extends GFFeedAddOn {
 	protected $merge_var_name = '';
 
 	/**
+	 * Defines the MailChimp merge fields used in the current request.
+	 *
+	 * @since  4.2.4
+	 * @access protected
+	 * @var    array $merge_fields The MailChimp merge fields used in the current request.
+	 */
+	protected $merge_fields = array();
+
+	/**
 	 * Contains an instance of the Mailchimp API library, if available.
 	 *
 	 * @since  1.0
 	 * @access protected
-	 * @var    object $api If available, contains an instance of the Mailchimp API library.
+	 * @var    GF_MailChimp_API $api If available, contains an instance of the Mailchimp API library.
 	 */
-	private $api = null;
+	public $api = null;
 
 	/**
 	 * Get an instance of this class.
@@ -188,7 +202,7 @@ class GFMailChimp extends GFFeedAddOn {
 
 		if ( $this->is_gravityforms_supported() ) {
 
-			// Load the Mailgun API library.
+			// Load the MailChimp API library.
 			if ( ! class_exists( 'GF_MailChimp_API' ) ) {
 				require_once( 'includes/class-gf-mailchimp-api.php' );
 			}
@@ -248,7 +262,9 @@ class GFMailChimp extends GFFeedAddOn {
 				'handle'  => $this->_slug . '_form_settings',
 				'src'     => $this->get_base_url() . '/css/form_settings.css',
 				'version' => $this->_version,
-				'enqueue' => array( 'admin_page' => array( 'form_settings' ) ),
+				'enqueue' => array(
+					array( 'admin_page' => array( 'form_settings' ) ),
+				),
 			),
 		);
 
@@ -384,6 +400,17 @@ class GFMailChimp extends GFFeedAddOn {
 								'name'  => 'markAsVIP',
 								'label' => esc_html__( 'Mark subscriber as VIP', 'gravityformsmailchimp' ),
 							),
+						),
+					),
+					array(
+						'name'  => 'tags',
+						'type'  => 'text',
+						'class' => 'medium merge-tag-support mt-position-right mt-hide_all_fields',
+						'label' => esc_html__( 'Tags', 'gravityformsmailchimp' ),
+						'tooltip'       => sprintf(
+							'<h6>%s</h6>%s',
+							esc_html__( 'Tags', 'gravityformsmailchimp' ),
+							esc_html__( 'Associate tags to your MailChimp contacts with a comma separated list (e.g. new lead, Gravity Forms, web source). Commas within a merge tag value will be created as a single tag.', 'gravityformsmailchimp' )
 						),
 					),
 					array(
@@ -547,19 +574,8 @@ class GFMailChimp extends GFFeedAddOn {
 		// Get current list ID.
 		$list_id = $this->get_setting( 'mailchimpList' );
 
-		try {
-
-			// Get merge fields.
-			$merge_fields = $this->api->get_list_merge_fields( $list_id );
-
-		} catch ( Exception $e ) {
-
-			// Log error.
-			$this->log_error( __METHOD__ . '(): Unable to get merge fields for MailChimp list; ' . $e->getMessage() );
-
-			return $field_map;
-
-		}
+		// Get merge fields.
+		$merge_fields = $this->get_list_merge_fields( $list_id );
 
 		// If merge fields exist, add to field map.
 		if ( ! empty( $merge_fields['merge_fields'] ) ) {
@@ -985,6 +1001,38 @@ class GFMailChimp extends GFFeedAddOn {
 				continue;
 			}
 
+			// Get merge field.
+			$merge_field = $this->get_list_merge_field( $feed['meta']['mailchimpList'], $name );
+
+			// Format date field.
+			if ( ! empty( $field_value ) && ! empty( $merge_field ) && in_array( $merge_field['type'], array( 'date', 'birthday' ) ) ) {
+
+				// Get date format.
+				$date_format = $merge_field['options']['date_format'];
+
+				// Convert field value to timestamp.
+				$field_value_timestamp = strtotime( $field_value );
+
+				// Format date.
+				switch( $date_format ) {
+
+					case 'DD/MM':
+						$field_value = date( 'd/m', $field_value_timestamp );
+						break;
+
+					case 'MM/DD':
+						$field_value = date( 'm/d', $field_value_timestamp );
+						break;
+
+					case 'DD/MM/YYYY':
+					case 'MM/DD/YYYY':
+						$field_value = date( 'm/d/Y', $field_value_timestamp );
+						break;
+
+				}
+
+			}
+
 			$merge_vars[ $name ] = $field_value;
 
 		}
@@ -1045,9 +1093,6 @@ class GFMailChimp extends GFFeedAddOn {
 			return;
 		}
 
-		// Initialize interests array.
-		$interests = $member_found ? $member['interests'] : array();
-
 		/**
 		 * Modify whether a user that is already subscribed to your list has their groups replaced when submitting the form a second time.
 		 *
@@ -1063,8 +1108,8 @@ class GFMailChimp extends GFFeedAddOn {
 		// Initialize interests to keep array.
 		$interests_to_keep = array();
 
-		// Get existing interests.
-		$existing_interests = rgar( $member, 'interests' );
+		// Initialize interests array.
+		$interests = $existing_interests = rgar( $member, 'interests', array() );
 
 		// If member was found, has existing interests and we are not keeping existing interest categories, remove them.
 		if ( $member_found && $existing_interests ) {
@@ -1116,8 +1161,26 @@ class GFMailChimp extends GFFeedAddOn {
 
 		}
 
-		// If member status is not defined, set to subscribed.
-		$member_status = isset( $member_status ) ? $member_status : 'subscribed';
+		// Get tags.
+		$tags = explode(',', rgars( $feed, 'meta/tags' ) );
+		$tags = array_map( 'trim', $tags );
+
+		// Prepare tags.
+		if ( ! empty( $tags ) ) {
+
+			// Loop through tags, replace merge tags.
+			foreach ( $tags as &$tag ) {
+				$tag = GFCommon::replace_variables( $tag, $form, $entry, false, false, false, 'text' );
+				$tag = trim( $tag );
+			}
+
+			// Remove empty tags.
+			$tags = array_filter( $tags );
+
+		}
+
+		// If member status is not defined or is anything other than pending, set to subscribed.
+		$member_status = isset( $member_status ) && $member_status === 'pending' ? $member_status : 'subscribed';
 
 		// Prepare subscription arguments.
 		$subscription = array(
@@ -1131,7 +1194,20 @@ class GFMailChimp extends GFFeedAddOn {
 			'ip_signup'    => rgar( $entry, 'ip' ),
 			'vip'          => rgars( $feed, 'meta/markAsVIP' ) ? true : false,
 			'note'         => rgars( $feed, 'meta/note' ),
+			'tags'         => array(),
 		);
+
+		// Get existing tags.
+		$existing_tags = $member ? wp_list_pluck( $member['tags'], 'name' ) : array();
+
+		// Add tags to subscription.
+		if ( ! empty( $tags ) ) {
+			$subscription['tags'] = $member ? array_merge( $existing_tags, $tags ) : $tags;
+			$subscription['tags'] = array_unique( $subscription['tags'] );
+		} else {
+			$subscription['tags'] = $member ? $existing_tags : $subscription['tags'];
+			$subscription['tags'] = array_unique( $subscription['tags'] );
+		}
 
 		// Prepare transaction type for filter.
 		$transaction = $member_found ? 'Update' : 'Subscribe';
@@ -1194,6 +1270,13 @@ class GFMailChimp extends GFFeedAddOn {
 			unset( $subscription['vip'] );
 		}
 
+		// Remove tags from subscription object.
+		$tags = $subscription['tags'];
+		unset( $subscription['tags'] );
+		foreach ( $tags as &$tag ) {
+			$tag = array( 'name' => $tag, 'status' => 'active' );
+		}
+
 		// Remove note from the subscription object and process any merge tags.
 		$note = GFCommon::replace_variables( $subscription['note'], $form, $entry, false, true, false, 'text' );
 		unset( $subscription['note'] );
@@ -1221,13 +1304,31 @@ class GFMailChimp extends GFFeedAddOn {
 				$this->log_error( __METHOD__ . '(): Field errors when attempting subscription: ' . print_r( $e->getErrors(), true ) );
 			}
 
-			return;
+			return $entry;
+
+		}
+
+		try {
+
+			// Log the subscriber tags to be added or updated.
+			$this->log_debug( __METHOD__ . "(): Subscriber tags to be {$action}: " . print_r( $tags, true ) );
+
+			// Update tags.
+			$this->api->update_member_tags( $list_id, $subscription['email_address'], $tags );
+
+			// Log that the subscriber tags was added or updated.
+			$this->log_debug( __METHOD__ . "(): Subscriber tags successfully {$action}." );
+
+		} catch ( Exception $e ) {
+
+			// Log that subscription could not be added or updated.
+			$this->add_feed_error( sprintf( esc_html__( 'Unable to add/update subscriber tags: %s', 'gravityformsmailchimp' ), $e->getMessage() ), $feed, $entry, $form );
 
 		}
 
 		if ( ! $note ) {
 			// Abort as there is no note to process.
-			return;
+			return $entry;
 		}
 
 		try {
@@ -1241,7 +1342,7 @@ class GFMailChimp extends GFFeedAddOn {
 			// Log that the note could not be added.
 			$this->add_feed_error( sprintf( esc_html__( 'Unable to add note to subscriber: %s', 'gravityformsmailchimp' ), $e->getMessage() ), $feed, $entry, $form );
 
-			return;
+			return $entry;
 
 		}
 
@@ -1264,7 +1365,7 @@ class GFMailChimp extends GFFeedAddOn {
 	 * @uses GFMailChimp::get_full_address()
 	 * @uses GFMailChimp::maybe_override_field_value()
 	 *
-	 * @return array
+	 * @return array|string
 	 */
 	public function get_field_value( $form, $entry, $field_id ) {
 
@@ -1673,6 +1774,88 @@ class GFMailChimp extends GFFeedAddOn {
 		}
 
 		return $address;
+
+	}
+
+	/**
+	 * Get MailChimp merge fields for list.
+	 *
+	 * @since  4.2.4
+	 * @access public
+	 *
+	 * @param string $list_id List ID to get merge fields for.
+	 *
+	 * @uses GFMailChimp::initialize_api()
+	 * @uses GF_MailChimp_API::get_list_merge_fields()
+	 *
+	 * @return array
+	 */
+	public function get_list_merge_fields( $list_id = '' ) {
+
+		// If no list ID was provided or if API cannot be initialized, return.
+		if ( rgblank( $list_id ) || ! $this->initialize_api() ) {
+			return array();
+		}
+
+		// If merge fields have already been retrieved, return.
+		if ( isset( $this->merge_fields[ $list_id ] ) ) {
+			return $this->merge_fields[ $list_id ];
+		}
+
+		try {
+
+			// Get merge fields.
+			$this->merge_fields[ $list_id ] = $this->api->get_list_merge_fields( $list_id );
+
+		} catch ( Exception $e ) {
+
+			// Log error.
+			$this->log_error( __METHOD__ . '(): Unable to get merge fields for MailChimp list; ' . $e->getMessage() );
+
+			$this->merge_fields[ $list_id ] = array();
+
+		}
+
+		return $this->merge_fields[ $list_id ];
+
+	}
+
+	/**
+	 * Get specific MailChimp merge field by tag.
+	 *
+	 * @since  4.2.4
+	 * @access public
+	 *
+	 * @param string $list_id List ID to get merge fields for.
+	 * @param string $tag     Merge field tag.
+	 *
+	 * @uses GFMailChimp::get_list_merge_fields()
+	 *
+	 * @return array
+	 */
+	public function get_list_merge_field( $list_id = '', $tag = '' ) {
+
+		// Get the merge fields for list.
+		$merge_fields = $this->get_list_merge_fields( $list_id );
+
+		// If no merge fields were provided, return.
+		if ( empty( $merge_fields ) || ! isset( $merge_fields['merge_fields'] ) ) {
+			return;
+		}
+
+		// Loop through merge fields.
+		foreach ( $merge_fields['merge_fields'] as $merge_field ) {
+
+			// If this is not the merge field we are looking for, skip.
+			if ( $tag !== $merge_field['tag'] ) {
+				continue;
+			}
+
+			return $merge_field;
+
+		}
+
+		return array();
 
 	}
 

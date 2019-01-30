@@ -4,6 +4,7 @@ web/app/plugins/*
 !web/app/plugins/taxonomy-terms-order
 !web/app/plugins/gravityforms
 !web/app/plugins/gravityformsmailchimp
+!web/app/plugins/wordpress-seo
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
 web/app/upgrade
@@ -20,22 +21,13 @@ web/app/uploads/*
 web/wp
 web/.htaccess
 
-# WP-CLI
-db-sync
-sql-dump-*.sql
-
 # Dotenv
 .env
 .env.*
 !.env.example
 
-# Vendor (e.g. Composer)
-vendor/*
-!vendor/.gitkeep
+# Composer
+/vendor
 
-# Node Package Manager
-node_modules
-
-# Vagrant
-bin
-.vagrant
+# WP-CLI
+wp-cli.local.yml

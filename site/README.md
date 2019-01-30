@@ -1,5 +1,6 @@
 # [Bedrock](https://roots.io/bedrock/)
-[![Build Status](https://travis-ci.org/roots/bedrock.svg)](https://travis-ci.org/roots/bedrock)
+[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
+[![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
 
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
 
@@ -8,61 +9,51 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 ## Features
 
 * Better folder structure
-* Dependency management with [Composer](http://getcomposer.org)
+* Dependency management with [Composer](https://getcomposer.org)
 * Easy WordPress configuration with environment specific files
 * Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
 * Autoloader for mu-plugins (use regular plugins as mu-plugins)
-
-Use [Trellis](https://github.com/roots/trellis) for additional features:
-
-* Easy development environments with [Vagrant](http://www.vagrantup.com/)
-* Easy server provisioning with [Ansible](http://www.ansible.com/) (Ubuntu 14.04, PHP 5.6 or HHVM, MariaDB)
-* One-command deploys
+* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
 
 ## Requirements
 
-* PHP >= 5.4
+* PHP >= 7.1
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
 
-1. Clone the git repo - `git clone https://github.com/roots/bedrock.git`
-2. Run `composer install`
-3. Copy `.env.example` to `.env` and update environment variables:
+1. Create a new project: 
+    ```sh
+    $ composer create-project roots/bedrock
+    ```
+2. Update environment variables in the `.env` file:
   * `DB_NAME` - Database name
   * `DB_USER` - Database user
   * `DB_PASSWORD` - Database password
   * `DB_HOST` - Database host
   * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
-4. Add theme(s) in `web/app/themes` as you would for a normal WordPress site.
-4. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
-5. Access WP admin at `http://example.com/wp/wp-admin`
-
-## Deploys
-
-There are two methods to deploy Bedrock sites out of the box:
-
-* [Trellis](https://github.com/roots/trellis)
-* [bedrock-capistrano](https://github.com/roots/bedrock-capistrano)
-
-Any other deployment method can be used as well with one requirement:
-
-`composer install` must be run as part of the deploy process.
+  * `WP_HOME` - Full URL to WordPress home (https://example.com)
+  * `WP_SITEURL` - Full URL to WordPress including subdirectory (https://example.com/wp)
+  * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
+    * Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
+    * Generate with [our WordPress salts generator](https://roots.io/salts.html)
+3. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site
+4. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/` 
+5. Access WordPress admin at `https://example.com/wp/wp-admin/`
 
 ## Documentation
 
-* [Folder structure](https://github.com/roots/bedrock/wiki/Folder-structure)
-* [Configuration files](https://github.com/roots/bedrock/wiki/Configuration-files)
-* [Environment variables](https://github.com/roots/bedrock/wiki/Environment-variables)
-* [Composer](https://github.com/roots/bedrock/wiki/Composer)
-* [wp-cron](https://github.com/roots/bedrock/wiki/wp-cron)
-* [mu-plugins autoloader](https://github.com/roots/bedrock/wiki/mu-plugins-autoloader)
+Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
 
 ## Contributing
 
-Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
+Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
+
+## Bedrock sponsors
+
+Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
+
+<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="itineris" width="200" height="150"></a>
 
 ## Community
 
@@ -72,3 +63,4 @@ Keep track of development and community news.
 * Follow [@rootswp on Twitter](https://twitter.com/rootswp)
 * Read and subscribe to the [Roots Blog](https://roots.io/blog/)
 * Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+* Listen to the [Roots Radio podcast](https://roots.io/podcast/)

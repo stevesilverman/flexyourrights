@@ -1,1 +1,13 @@
 path: web/wp
+server:
+  docroot: web
+
+@development:
+  ssh: vagrant@flexyourrights.test/srv/www/flexyourrights.org/current
+@staging:
+  ssh: web@fyr2020.k-thx.com/srv/www/flexyourrights.org/current
+# Commented out for now so we don't ever accidentally wipe out the existing FYR site
+# while we're working on this new one
+#
+# @production:
+#   ssh: web@flexyourrights.org/srv/www/flexyourrights.org/current

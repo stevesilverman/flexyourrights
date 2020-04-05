@@ -1,9 +1,0 @@
-{
-    "name": "wp-premium/gravityformsmailchimp",
-    "type": "wordpress-plugin",
-    "autoload": {
-        "classmap": [
-            "."
-        ]
-    }
-}

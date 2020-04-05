@@ -1,26 +1,17 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/plugins/taxonomy-terms-order
-!web/app/plugins/gravityforms
-!web/app/plugins/gravityformsmailchimp
-!web/app/plugins/wordpress-seo
-web/app/mu-plugins/*
-!web/app/mu-plugins/.gitkeep
+web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-!web/app/mu-plugins/disallow-indexing.php
-!web/app/mu-plugins/register-theme-directory.php
-!web/app/mu-plugins/bedrock-autoloader.php
-!web/app/mu-plugins/disable-gutenberg.php
-!web/app/mu-plugins/disable-plugins-when-doing-local-dev.php
-!web/app/mu-plugins/_soil.php
-!web/app/mu-plugins/soil
 
 # WordPress
 web/wp
 web/.htaccess
+
+# Logs
+*.log
 
 # Dotenv
 .env

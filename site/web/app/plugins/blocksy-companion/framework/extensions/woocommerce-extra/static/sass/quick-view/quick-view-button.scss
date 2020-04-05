@@ -1,0 +1,70 @@
+.ct-open-quick-view {
+	--linkInitialColor: var(--color);
+	--linkHoverColor: #fff;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	opacity: 0;
+	transition: color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+				opacity 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+		background: #fff;
+		transition: transform 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+					background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	}
+
+	&:hover {
+		&:after {
+			background: var(--paletteColor1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+	}
+
+	svg {
+		position: relative;
+		z-index: 1;
+		fill: currentColor;
+	}
+
+	@include media-breakpoint-down (sm) {
+		display: none;
+	}
+
+	[data-loader] {
+		visibility: hidden;
+		z-index: 1;
+		width: inherit;
+		height: inherit;
+	}
+}
+
+
+.shop-entries {
+
+	&[data-layout="grid"] .ct-open-quick-view {
+		right: 20px;
+		bottom: 20px;
+	}
+
+	&[data-layout="shop-simple"] .ct-open-quick-view {
+		right: 20px;
+		bottom: 20px;
+	}
+
+
+	.shop-entry-card:hover {
+		.ct-open-quick-view {
+			opacity: 1;
+		}
+	}
+}

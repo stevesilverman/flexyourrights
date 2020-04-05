@@ -1,0 +1,1461 @@
+# Copyright (C) 2020 blc
+# This file is distributed under the same license as the blc package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: blc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"x-generator: babel-plugin-wp-i18n\n"
+
+#. translators: %s: PHP version
+#: blocksy-companion.php:51
+msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
+msgstr ""
+
+#. translators: %s: WordPress version
+#: blocksy-companion.php:63
+msgid ""
+"Blocksy requires WordPress version %s+. Because you are using an earlier "
+"version, the plugin is currently NOT RUNNING."
+msgstr ""
+
+#: framework/theme-integration.php:40,
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:16,
+#: framework/extensions/widgets/widgets/ct-facebook/view.php:12,
+#: framework/extensions/widgets/widgets/ct-facebook/widget.php:13
+msgid "Facebook"
+msgstr ""
+
+#: framework/theme-integration.php:41
+msgid "Twitter"
+msgstr ""
+
+#: framework/theme-integration.php:42
+msgid "LinkedIn"
+msgstr ""
+
+#: framework/theme-integration.php:43
+msgid "Dribbble"
+msgstr ""
+
+#: framework/theme-integration.php:44,
+#: framework/extensions/instagram/customizer.php:4
+msgid "Instagram"
+msgstr ""
+
+#: framework/theme-integration.php:84
+msgid "Companion"
+msgstr ""
+
+#: framework/widgets-manager.php:71
+msgid "Default widget name"
+msgstr ""
+
+#: framework/widgets-manager.php:77
+msgid "Display online support infomation"
+msgstr ""
+
+#: framework/widgets-manager.php:138
+msgid "Widget Title"
+msgstr ""
+
+#: framework/features/dynamic-css.php:44
+msgid "Dynamic CSS Output"
+msgstr ""
+
+#: framework/features/dynamic-css.php:48
+msgid ""
+"The strategy of outputing the dynamic CSS. File - all the CSS code will be "
+"placed in a static file, otherwise it will be placed inline in head."
+msgstr ""
+
+#: framework/features/dynamic-css.php:50
+msgid "File"
+msgstr ""
+
+#: framework/features/dynamic-css.php:51
+msgid "Inline"
+msgstr ""
+
+#: framework/features/google-analytics.php:50
+msgid "Google Analytics"
+msgstr ""
+
+#: framework/features/google-analytics.php:54
+msgid "Insert here your Google Analytics tracking ID"
+msgstr ""
+
+#: framework/features/google-analytics.php:60
+msgid "IP Anonymization"
+msgstr ""
+
+#: framework/features/google-analytics.php:63
+msgid ""
+"Enable Google Analytics IP anonymization feature <a href=\"https://"
+"developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization"
+"\">(more info)</a>."
+msgstr ""
+
+#: framework/extensions/cookies-consent/config.php:4
+msgid "Cookies Consent"
+msgstr ""
+
+#: framework/extensions/cookies-consent/config.php:5
+msgid "Enable this extension in order to comply with the GDPR regulations."
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:4
+msgid "Cookie Consent"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:19,
+#: framework/extensions/mailchimp/customizer.php:12
+msgid "General"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:33
+msgid "Type 1"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:38
+msgid "Type 2"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:45
+msgid "Cookie period"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:53
+msgid "One hour"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:54
+msgid "One day"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:55
+msgid "One week"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:56
+msgid "One month"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:57
+msgid "Three months"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:58
+msgid "Six months"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:59
+msgid "One year"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:60
+msgid "Forever"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:67,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:72,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:98,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:125,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:152,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:179,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:206
+msgid "Content"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:69,
+#: framework/extensions/cookies-consent/helpers.php:28
+msgid ""
+"We use cookies to ensure that we give you the best experience on our website."
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:81
+msgid "Button text"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:84,
+#: framework/extensions/cookies-consent/helpers.php:31
+msgid "Accept"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:92,
+#: framework/extensions/mailchimp/customizer.php:147,
+#: framework/extensions/widgets/widgets/ct-posts/options.php:38
+msgid "Design"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:97
+msgid "Font Color"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:114,
+#: framework/extensions/cookies-consent/customizer.php:144,
+#: framework/extensions/cookies-consent/customizer.php:169,
+#: framework/extensions/mailchimp/customizer.php:169,
+#: framework/extensions/mailchimp/customizer.php:200,
+#: framework/extensions/mailchimp/customizer.php:225
+msgid "Initial"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:120,
+#: framework/extensions/cookies-consent/customizer.php:149,
+#: framework/extensions/mailchimp/customizer.php:175,
+#: framework/extensions/mailchimp/customizer.php:205
+msgid "Hover"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:128,
+#: framework/extensions/mailchimp/customizer.php:183
+msgid "Button Color"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:156,
+#: framework/extensions/mailchimp/customizer.php:212
+msgid "Background Color"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:181
+msgid "Maximum Width"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:204,
+#: framework/extensions/cookies-consent/helpers.php:76
+msgid "I accept the %sPrivacy Policy%s"
+msgstr ""
+
+#: framework/extensions/cookies-consent/customizer.php:208
+msgid "This text will appear under each comment form and subscribe form."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:1,
+#: framework/extensions/instagram/readme.php:1,
+#: framework/extensions/mailchimp/readme.php:1,
+#: framework/extensions/woocommerce-extra/readme.php:1
+msgid "Instructions"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:4
+msgid ""
+"After installing and activating the Cookies Consent extension you will be "
+"able to configure it from this location:"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:9,
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:110,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:31
+msgid "Customizer"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:13
+msgid "Navigate to %s and customize the notification to meet your needs."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:16
+msgid "Customizer ➝ Cookie Consent"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:25
+msgid "W3 Total Cache Support"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:28
+msgid ""
+"If you encounter problems with W3 Total Cache plugin, please follow these "
+"steps:"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:35
+msgid ""
+"Navigate to %sPerformance ➝ Page Cache%s and scroll to the %sRejected cookies"
+"%s option."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:45
+msgid ""
+"In the text field there, insert this value: "
+"%sblocksy_cookies_consent_accepted%s."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:53,
+#: framework/extensions/cookies-consent/readme.php:88
+msgid "Make sure to purge all caches from settings."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:60
+msgid "WP Fastest Cache Support"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:63
+msgid ""
+"If you encounter problems with WP Fastest Cache plugin, please follow these "
+"steps:"
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:70
+msgid "Navigate to %sExclude%s and scroll to the %sExclude Cookies%s option."
+msgstr ""
+
+#: framework/extensions/cookies-consent/readme.php:80
+msgid ""
+"Click on Add new rule and insert this value: "
+"%sblocksy_cookies_consent_accepted%s."
+msgstr ""
+
+#: framework/extensions/instagram/config.php:4
+msgid ""
+"Show your Instagram feed anywhere on your site with the help of a widget or "
+"a section."
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:13
+msgid "Instagram section"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:30
+msgid "Username"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:39
+msgid "Images Count"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:53,
+#: framework/extensions/mailchimp/customizer.php:126
+msgid "Visibility"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:64,
+#: framework/extensions/mailchimp/customizer.php:137
+msgid "Desktop"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:65,
+#: framework/extensions/mailchimp/customizer.php:138
+msgid "Tablet"
+msgstr ""
+
+#: framework/extensions/instagram/customizer.php:66,
+#: framework/extensions/mailchimp/customizer.php:139,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:114
+msgid "Mobile"
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:4
+msgid ""
+"After installing and activating the Instagram extension you will have two "
+"possibilities to show your feed:"
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:9
+msgid "Instagram Widget"
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:13,
+#: framework/extensions/mailchimp/readme.php:13
+msgid "Navigate to %s and place the widget in any widget area you want."
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:16,
+#: framework/extensions/mailchimp/readme.php:16
+msgid "Appearance ➝ Widgets"
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:24
+msgid "Instagram Section"
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:28
+msgid "Navigate to %s and customize the location, number of images and more."
+msgstr ""
+
+#: framework/extensions/instagram/readme.php:31
+msgid "Customizer ➝ Instagram"
+msgstr ""
+
+#: framework/extensions/mailchimp/config.php:4
+msgid "Mailchimp"
+msgstr ""
+
+#: framework/extensions/mailchimp/config.php:5
+msgid ""
+"Display a Mailchimp subscribe form with the help of a widget or a block."
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:4
+msgid "Subscribe Form"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:18,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:15,
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:16,
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:15,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:15,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:65,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:91,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:118,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:145,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:172,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:199,
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:13,
+#: framework/extensions/widgets/widgets/ct-posts/options.php:30,
+#: framework/extensions/widgets/widgets/ct-quote/options.php:15,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:15
+msgid "Title"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:21,
+#: framework/extensions/mailchimp/helpers.php:36
+msgid "Newsletter Updates"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:27,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:23
+msgid "Message"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:29,
+#: framework/extensions/mailchimp/helpers.php:40,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:25,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:16
+msgid "Enter your email address below to subscribe to our newsletter"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:42,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:32
+msgid "List Source"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:49,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:39
+msgid "Default"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:50,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:40,
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:47
+msgid "Custom"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:62,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:50
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:128
+msgid "List ID"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:80,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:62
+msgid "Name Field"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:93,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:74
+msgid "Name Label"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:95,
+#: framework/extensions/mailchimp/helpers.php:51,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:76,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:42
+msgid "Your name"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:105,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:85
+msgid "Mail Label"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:107,
+#: framework/extensions/mailchimp/helpers.php:52,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:87,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:43
+msgid "Your email"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:114,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:93
+msgid "Button Label"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:116,
+#: framework/extensions/mailchimp/helpers.php:45,
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:95,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:19
+msgid "Subscribe"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:152
+msgid "Content Color"
+msgstr ""
+
+#: framework/extensions/mailchimp/customizer.php:251
+msgid "Container Inner Spacing"
+msgstr ""
+
+#: framework/extensions/mailchimp/extension.php:92
+msgid "Disable Subscribe Form"
+msgstr ""
+
+#: framework/extensions/mailchimp/helpers.php:100,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:72
+msgid "$name_label"
+msgstr ""
+
+#: framework/extensions/mailchimp/helpers.php:100,
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:83
+#: static/js/screens/SiteExport.js:86
+msgid "Name"
+msgstr ""
+
+#: framework/extensions/mailchimp/helpers.php:103,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:75
+msgid "$email_label"
+msgstr ""
+
+#: framework/extensions/mailchimp/helpers.php:103,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:168
+msgid "Email"
+msgstr ""
+
+#: framework/extensions/mailchimp/readme.php:4
+msgid ""
+"After installing and activating the Mailchimp extension you will have two "
+"possibilities to show your subscribe form:"
+msgstr ""
+
+#: framework/extensions/mailchimp/readme.php:9
+msgid "Mailchimp Widget"
+msgstr ""
+
+#: framework/extensions/mailchimp/readme.php:24
+msgid "Mailchimp Block"
+msgstr ""
+
+#: framework/extensions/mailchimp/readme.php:28
+msgid "Navigate to %s and customize the form and more."
+msgstr ""
+
+#: framework/extensions/mailchimp/readme.php:31
+msgid "Customizer ➝ Single Posts"
+msgstr ""
+
+#: framework/extensions/widgets/config.php:4
+msgid ""
+"Popular/Recent Posts, Advertisement, Contact Info, Mailchimp Subscribe, "
+"Social Icons and more."
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/config.php:4
+msgid "Woocommerce Extra"
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/config.php:5
+msgid "WooCommerce extra functionality."
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/customizer.php:4
+msgid "Quick view"
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/helpers.php:53
+msgid "Add To Cart"
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/readme.php:4
+msgid ""
+"After installing and activating the WooCommerce Extra extension you will "
+"have these features:"
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/readme.php:9
+msgid "Product Quick View"
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/readme.php:13
+msgid "Navigate to %s and enable or disable it."
+msgstr ""
+
+#: framework/extensions/woocommerce-extra/readme.php:16
+msgid "Customizer ➝ WooCommerce ➝ Archives ➝ Card Options"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:144
+msgid "Widget area does not exist in theme (using Inactive)"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:167
+msgid "Site does not support widget"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:201
+msgid "Widget already exists"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:268
+msgid "Imported"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:271
+msgid "Imported to Inactive"
+msgstr ""
+
+#: framework/features/demo-install/widgets-import.php:288
+msgid "No Title"
+msgstr ""
+
+#: framework/extensions/instagram/ct-instagram/options.php:18
+msgid "Number of Images"
+msgstr ""
+
+#: framework/extensions/instagram/ct-instagram/options.php:27
+msgid "Images per Row"
+msgstr ""
+
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:18,
+#: framework/extensions/mailchimp/ct-mailchimp/view.php:12
+msgid "Newsletter"
+msgstr ""
+
+#: framework/extensions/mailchimp/ct-mailchimp/options.php:101
+msgid "Content Alignment"
+msgstr ""
+
+#: framework/extensions/mailchimp/ct-mailchimp/widget.php:13
+msgid "Mailchimp Subscribe"
+msgstr ""
+
+#: framework/extensions/mailchimp/ct-mailchimp/widget.php:14
+msgid "Mailchimp subscribe form"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:19,
+#: framework/extensions/widgets/widgets/ct-about-me/view.php:12,
+#: framework/extensions/widgets/widgets/ct-about-me/widget.php:14
+msgid "About me"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:24
+msgid "Type"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:32
+msgid "Simple"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:33
+msgid "Boxed"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:38,
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:23,
+#: framework/extensions/widgets/widgets/ct-posts/options.php:69
+msgid "Source"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:46
+msgid "From WP"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:58
+msgid "User"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:73
+msgid "Avatar"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:77,
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:62,
+#: framework/extensions/widgets/widgets/ct-quote/options.php:51
+msgid "Select Image"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:78,
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:63,
+#: framework/extensions/widgets/widgets/ct-quote/options.php:52
+msgid "Change Image"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:86,
+#: framework/extensions/widgets/widgets/ct-about-me/view.php:25,
+#: framework/extensions/widgets/widgets/ct-quote/options.php:35,
+#: framework/extensions/widgets/widgets/ct-quote/view.php:18
+msgid "John Doe"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:91,
+#: framework/extensions/widgets/widgets/ct-posts/widget.php:14
+msgid "Description"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:103
+msgid "Social Channels"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:106,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:27
+msgid "You can configure social URLs in %s."
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:134,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:55
+msgid "Icons Size"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:141,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:62
+msgid "Small"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:142,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:63
+msgid "Medium"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:143,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:64
+msgid "Large"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:148,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:69
+msgid "Icons Shape Type"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:155,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:76
+msgid "None"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:156,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:77
+msgid "Rounded"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:157,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:78
+msgid "Square"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:167,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:88
+msgid "Shape Fill Type"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:174,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:95
+msgid "Solid"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/options.php:175,
+#: framework/extensions/widgets/widgets/ct-socials/options.php:96
+msgid "Outline"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/view.php:100
+msgid "View Profile"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-about-me/widget.php:13
+msgid "About Me"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:18,
+#: framework/extensions/widgets/widgets/ct-advertisement/view.php:12,
+#: framework/extensions/widgets/widgets/ct-advertisement/widget.php:13,
+#: framework/extensions/widgets/widgets/ct-advertisement/widget.php:14
+msgid "Advertisement"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:31
+msgid "Code"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:32
+msgid "Image"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:42
+msgid "Ad Code"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:58
+msgid "Upload Image"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:68
+msgid "Ad URL"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-advertisement/options.php:76,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:225
+msgid "Open link in new tab"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:18,
+#: framework/extensions/widgets/widgets/ct-contact-info/view.php:12,
+#: framework/extensions/widgets/widgets/ct-contact-info/widget.php:13
+msgid "Contact Info"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:23
+msgid "Text"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:37,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:66,
+#: framework/extensions/widgets/widgets/ct-contact-info/view.php:24
+msgid "Address:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:44,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:92,
+#: framework/extensions/widgets/widgets/ct-contact-info/view.php:31
+msgid "Phone:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:52,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:119,
+#: framework/extensions/widgets/widgets/ct-contact-info/view.php:39
+msgid "Mobile:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:61
+msgid "Address"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:79,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:105,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:132,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:159,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:186,
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:213
+msgid "Link (optional)"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:86
+msgid "Phone"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:141
+msgid "Fax"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:146
+msgid "Fax:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:173
+msgid "Email:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:195
+msgid "Website"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/options.php:200
+msgid "Website:"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-contact-info/widget.php:14
+msgid "Contact info"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:22
+msgid "Page URL"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:30
+msgid "Profile Photos"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:36
+msgid "Timeline"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:42
+msgid "Cover Photo"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/options.php:48
+msgid "Small Header"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-facebook/widget.php:14
+msgid "Facebook like box"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:19
+msgid "All categories"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:33,
+#: framework/extensions/widgets/widgets/ct-posts/view.php:76,
+#: framework/extensions/widgets/widgets/ct-posts/widget.php:13
+msgid "Posts"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:43
+msgid "Without Thumbnails"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:44
+msgid "Small Thumbnails"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:45
+msgid "Large Thumbnails"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:46
+msgid "First Thumbnail Large"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:47
+msgid "Rounded Thumbnails"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:48
+msgid "Numbered"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:56
+msgid "Sort by"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:61
+msgid "Recent"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:62
+msgid "Most Commented"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:74
+msgid "Categories"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:75
+msgid "Custom Query"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:87
+#: framework/extensions/instagram/dashboard-static/js/InstagramTimeout.js:100
+msgid "Days"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:92
+msgid "All Time"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:93
+msgid "1 Week"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:94
+msgid "1 Month"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:95
+msgid "3 Months"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:96
+msgid "6 Months"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:97
+msgid "1 Year"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:104
+msgid "Category"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:112
+msgid "Number of Posts"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:145
+msgid "Show Date"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-posts/options.php:151
+msgid "Show Comments"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-quote/options.php:18,
+#: framework/extensions/widgets/widgets/ct-quote/view.php:12,
+#: framework/extensions/widgets/widgets/ct-quote/widget.php:13,
+#: framework/extensions/widgets/widgets/ct-quote/widget.php:14
+msgid "Quote"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-quote/options.php:23
+msgid "Quote text"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-quote/options.php:32
+msgid "Author Name"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-quote/options.php:41
+msgid "Author Label"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-quote/options.php:47
+msgid "Author Avatar"
+msgstr ""
+
+#. translators: %s here is the author name
+#: framework/extensions/widgets/widgets/ct-quote/view.php:49
+msgid "By %s"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-socials/options.php:18,
+#: framework/extensions/widgets/widgets/ct-socials/view.php:11,
+#: framework/extensions/widgets/widgets/ct-socials/widget.php:14
+msgid "Social Icons"
+msgstr ""
+
+#: framework/extensions/widgets/widgets/ct-socials/widget.php:15
+msgid "Social channels icons"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/EditSettings.js:29
+msgid "Edit Settings"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/EditSettings.js:62
+msgid "Instagram Settings"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/EditSettings.js:63
+msgid "Check for new Instagram posts every:"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/Instagram.js:70
+#: framework/extensions/mailchimp/dashboard-static/js/Mailchimp.js:73
+#: static/js/screens/Extensions.js:73
+msgid "Deactivate"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/Instagram.js:71
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:150
+#: framework/extensions/mailchimp/dashboard-static/js/Mailchimp.js:74
+#: static/js/screens/Extensions.js:74
+msgid "Activate"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/InstagramTimeout.js:114
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:151
+msgid "Save Settings"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/InstagramTimeout.js:82
+msgid "Clear Caches"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/InstagramTimeout.js:98
+msgid "Minutes"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/InstagramTimeout.js:99
+msgid "Hours"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/ResetInstagramCaches.js:30
+msgid "Checking"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/ResetInstagramCaches.js:31
+msgid "Done"
+msgstr ""
+
+#: framework/extensions/instagram/dashboard-static/js/ResetInstagramCaches.js:32
+msgid "Check for new posts now"
+msgstr ""
+
+#: framework/extensions/mailchimp/admin-static/js/ListPicker.js:14
+#: framework/extensions/mailchimp/admin-static/js/ListPicker/Implementation.js:59
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:148
+#: static/js/screens/SiteExport.js:146
+msgid "Loading..."
+msgstr ""
+
+#: framework/extensions/mailchimp/admin-static/js/ListPicker/Implementation.js:60
+#: framework/extensions/mailchimp/dashboard-static/js/ListPicker.js:88
+msgid "Invalid API Key..."
+msgstr ""
+
+#: framework/extensions/mailchimp/admin-static/js/ListPicker/Implementation.js:88
+#: framework/extensions/mailchimp/dashboard-static/js/ListPicker.js:116
+msgid "Select list..."
+msgstr ""
+
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:102
+msgid ""
+"Enter your MailChimp credentials in the form below. More info on how to "
+"generate an API key can be found %shere%s."
+msgstr ""
+
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:114
+msgid "API Key"
+msgstr ""
+
+#: framework/extensions/mailchimp/dashboard-static/js/EditCredentials.js:98
+msgid "MailChimp Credentials"
+msgstr ""
+
+#: framework/extensions/mailchimp/dashboard-static/js/ListPicker.js:87
+msgid "Loading"
+msgstr ""
+
+#: static/js/dashboard.js:26
+msgid "Starter Sites"
+msgstr ""
+
+#: static/js/dashboard.js:37
+msgid "Extensions"
+msgstr ""
+
+#: static/js/helpers/SubmitSupport.js:13
+msgid "Support"
+msgstr ""
+
+#: static/js/helpers/SubmitSupport.js:15
+msgid ""
+"Got a question or need some help with the theme? You can always submit a "
+"support ticket, and our team will help you out."
+msgstr ""
+
+#: static/js/helpers/SubmitSupport.js:25
+msgid "Submit a Ticket"
+msgstr ""
+
+#: static/js/screens/DemoInstall.js:112
+msgid "Loading Starter Sites..."
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemoInstaller.js:66
+msgid "Installing"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemoInstaller.js:69
+msgid ""
+"Please be patient and don't refresh this page, the import process may take a "
+"while, this also depends on your server."
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemoToInstall.js:288
+msgid "Back"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemoToInstall.js:328
+msgid "Install"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemoToInstall.js:329
+msgid "Next"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemosList.js:55
+msgid "Preview"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemosList.js:64
+msgid "Modify"
+msgstr ""
+
+#: static/js/screens/DemoInstall/DemosList.js:65
+msgid "Import"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/InstallCompleted.js:23
+msgid "Starter Site Imported Successfully"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/InstallCompleted.js:26
+msgid "Now you can view your website or start customizing it"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/InstallCompleted.js:34
+msgid "Customize"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/InstallCompleted.js:41
+msgid "View site"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:12
+msgid "copying child theme sources"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:16
+msgid "activating child theme"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:21
+msgid "installing plugin %s"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:28
+msgid "activating plugin %s"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:34
+msgid "downloading demo widgets"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:38
+msgid "installing demo widgets"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:42
+msgid "downloading demo options"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:46
+msgid "importing images from customizer"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:50
+msgid "import customizer options"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:54
+msgid "activating required extensions"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:58
+msgid "removing previously installed posts"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:62
+msgid "removing previously installed taxonomies"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:66
+msgid "removing default WordPress pages"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:70
+msgid "resetting customizer options"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:74
+msgid "resetting widgets"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:89
+msgid "users"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:90
+msgid "terms"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:91
+msgid "images"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:92
+msgid "posts"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/messages.js:93
+msgid "comments"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:105
+msgid "Child theme"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:111
+msgid "Required plugins"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:119
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:49
+msgid "Erase content"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:125
+msgid "Final touches"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:131
+msgid "Import options"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:138
+msgid "Import widgets"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:145
+msgid "Import content"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Installer/useInstaller.js:97
+msgid "Register demo"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:100
+msgid ""
+"You already have a child theme properly installed and activated. Move on."
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:106
+msgid "Learn more about child themes"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:70
+msgid ""
+"We strongly recommend to install the child theme, this way you will have "
+"freedom to make changes without breaking the parent theme."
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:77
+msgid ""
+"We strongly recommend to activate the child theme, this way you will have "
+"freedom to make changes without breaking the parent theme."
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:93
+msgid "Install Child Theme"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ChildTheme.js:94
+msgid "Activate Child Theme"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Content.js:28
+msgid "Import Content"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Content.js:31
+msgid ""
+"This will import posts, pages, comments, navigation menus, custom fields, "
+"terms and custom posts"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Content.js:71
+msgid "Clean Install"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Content.js:73
+msgid ""
+"This option will remove the previous imported content and will perform a "
+"fresh and clean install."
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:120
+msgid "This starter site is already installed"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:125
+msgid "Starter Site Removed"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:134
+msgid "Dismiss"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:143
+msgid "What steps do you want to perform next?"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:155
+msgid "Remove"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:164
+msgid "Reinstall"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/ModifyDemo.js:42
+msgid "Deactivate demo plugins"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/PickBuilder.js:66
+msgid "Choose Page Builder"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/PickBuilder.js:69
+msgid ""
+"This demo template was built and is available to be used with one of these "
+"page builders. Please select your prefered one in order to continue."
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Plugins.js:54
+msgid "Install & Activate Plugins"
+msgstr ""
+
+#: static/js/screens/DemoInstall/Wizzard/Plugins.js:56
+msgid ""
+"The following plugins are required for this starter site in order to work "
+"properly."
+msgstr ""
+
+#: static/js/screens/Extensions.js:159
+msgid "Loading Extensions Status..."
+msgstr ""
+
+#: static/js/screens/Extensions.js:172
+msgid ""
+"Supercharge your website with the help of this extensions. Enhance your "
+"Shop, display your Instagram feed, add a Trending Posts widget, collect "
+"subscribers and more..."
+msgstr ""
+
+#: static/js/screens/OptIn.js:55
+msgid "Stay Updated"
+msgstr ""
+
+#: static/js/screens/OptIn.js:58
+msgid ""
+"Never miss an important update - opt in to our security & feature updates "
+"notifications, and non-sensitive diagnostic tracking."
+msgstr ""
+
+#: static/js/screens/OptIn.js:69
+msgid "Allow & Continue"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:107
+msgid "PRO"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:121
+msgid "Builder"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:132
+msgid "Plugins"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:147
+msgid "Export site"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:72
+msgid "Site export"
+msgstr ""
+
+#: static/js/screens/SiteExport.js:98
+msgid "Preview URL"
+msgstr ""

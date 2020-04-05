@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e851b3c509fe6942d38e6d5cd768b6a",
+    "content-hash": "0bd93a1a1ee10ab0a530cb0d8bb85a15",
     "packages": [
         {
             "name": "composer/installers",
@@ -694,6 +694,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
+            "name": "wpackagist-theme/blocksy",
+            "version": "1.7.8",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/blocksy/",
+                "reference": "1.7.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/blocksy.1.7.8.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "homepage": "https://wordpress.org/themes/blocksy/"
         }
     ],
     "packages-dev": [

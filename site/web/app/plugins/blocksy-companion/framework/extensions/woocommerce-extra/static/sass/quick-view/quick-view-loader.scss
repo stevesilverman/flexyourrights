@@ -1,0 +1,20 @@
+.ct-loading-view {
+	.ct-open-quick-view {
+		opacity: 1 !important;
+
+		&:after {
+			background: var(--paletteColor1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+
+		svg {
+			opacity: 0;
+		}
+
+		[data-loader] {
+			--loaderColor: #fff;
+			visibility: visible;
+			animation-play-state: running;
+		}
+	}
+}

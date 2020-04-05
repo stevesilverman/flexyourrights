@@ -1,0 +1,30 @@
+.ct-instagram-timeout {
+
+	[data-columns="3"] {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 7px;
+
+		input {
+			--height: 35px;
+		}
+
+		button {
+			width: 100%;
+		}
+	}
+
+	.button {
+		height: 30px;
+	}
+
+	[data-design="inline"] {
+		padding-top: 20px;
+		margin-top: 20px;
+		border-top: 1px dashed #eee;
+
+		button {
+			width: 100%;
+		}
+	}
+}

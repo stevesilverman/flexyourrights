@@ -1,0 +1,113 @@
+.ct-quick-view-summary {
+	position: relative;
+	overflow: hidden;
+	
+	.entry-summary {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		height: calc(100% - 55px);
+		padding: 30px 40px 0 40px;
+		overflow-y: auto;
+
+		> *:last-child {
+			margin-bottom: 40px;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		.product_title {
+			padding-right: 40px;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		z-index: 2;
+		content: '';
+		top: -2px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: #fff;
+		box-shadow: 0px 0px 20px 20px #fff;
+	}
+}
+
+
+.quick-view-modal div.product form.cart {
+	border-top-style: dashed; 
+
+	// hide native add to cart button
+	.single_add_to_cart_button {
+		display: none !important;
+	}
+}
+
+
+// actions
+.ct-quick-view-actions {
+	display: flex;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	box-shadow: 0px 0px 20px 20px #fff;
+
+	> * {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 55px;
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: 0.015em;
+		transition: background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+		&:first-child:nth-last-child(1) {
+			width: 100%;
+		}
+
+		&:first-child:nth-last-child(2),
+		&:first-child:nth-last-child(2) ~ * {
+			width: 50%;
+		}
+	}
+
+	.ct-quick-add {
+		color: #fff;
+		background: var(--paletteColor1);
+
+		&:hover {
+			background: var(--paletteColor2);
+		}
+
+		&.loading {
+			&:after {
+				font-family: 'woo';
+				content: "\e982";
+				font-size: 14px;
+				line-height: 14px;
+				font-weight: 400;
+				color: currentColor;
+				margin-left: 10px;
+				margin-top: 2px;
+				animation: spin 1.5s linear infinite;
+			}
+		}
+	}
+
+	.ct-quick-more {
+		--linkInitialColor: var(--color);
+		background: rgba(224, 229, 235, 0.6);
+
+		&:hover {
+			background: rgba(224, 229, 235, 0.8);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.ct-socials-widget {
+	--spacing: 20px;
+
+	[data-color="custom"] {
+		
+		&[data-type="simple"] {
+			--color: rgba(100, 110, 119, 1);
+			--colorHover: var(--paletteColor1);
+		}
+
+		&[data-fill="solid"] {
+			--color: rgba(100, 110, 119, 1);
+			--colorHover: #fff;
+			--backgroundColor: rgba(218, 222, 228, 0.3);
+			--backgroundColorHover: var(--paletteColor1);
+		}
+
+		&[data-fill="outline"] {
+			--color: rgba(100, 110, 119, 1);
+			--colorHover: var(--paletteColor1);
+			--backgroundColor: rgba(218, 222, 228, 1);
+			--backgroundColorHover: var(--paletteColor1);
+		}
+	}
+}

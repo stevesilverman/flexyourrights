@@ -14,6 +14,7 @@ wordpress_sites:
     ssl:
       enabled: true
       provider: letsencrypt
+      hsts_max_age: 0
     cache:
       enabled: true
     htpasswd:

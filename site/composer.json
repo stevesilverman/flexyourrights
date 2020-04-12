@@ -44,7 +44,8 @@
     "wpackagist-plugin/safe-svg": "^1.9",
     "wpackagist-plugin/autodescription": "^4.0",
     "roots/soil": "^3.9",
-    "wpackagist-theme/blocksy": "^1.7"
+    "wpackagist-theme/blocksy": "^1.7",
+    "wpackagist-plugin/elementor": "^2.9"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",
